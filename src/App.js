@@ -1,7 +1,11 @@
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
 import { useState } from "react";
-
+import Search from "./components/Search";
+import NumResults from "./components/NumResults";
+import MoviesListBox from "./components/MoviesListBox";
+import WatchedBox from "./components/WatchedBox";
+import MovieList from "./components/MovieList";
 export const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -57,8 +61,16 @@ export default function App() {
 
   return (
     <>
-      <NavBar movies={movies} />
-      <Main movies={movies} />
+      <NavBar>
+        <Search />
+        <NumResults movies={movies} />
+      </NavBar>
+      <Main>
+        <MoviesListBox>
+          <MovieList movies={movies} />
+        </MoviesListBox>
+        <WatchedBox />
+      </Main>
     </>
   );
 }
