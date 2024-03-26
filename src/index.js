@@ -10,14 +10,17 @@ function TestStarRating() {
   return (
     <div>
       <StarRating
-        maxRating={5}
-        color={"red"}
-        size={30}
-        messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
-        defaultRating={3}
+        // maxRating={5}
+        // color={"red"}
+        // size={30}
+        // messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
+        // defaultRating={3}
         onSetRating={setMovieRaiting}
       />
-      <p>This movies was rated {movieRaiting}</p>
+      <p>
+        This movies was rated {movieRaiting}
+        {typeof movieRaiting !== "string" ? " stars" : ""}
+      </p>
     </div>
   );
 }
