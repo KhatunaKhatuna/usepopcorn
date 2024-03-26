@@ -25,7 +25,7 @@ export default function StarRating({
 
   function handleRating(rating) {
     setRating(rating);
-    onSetRating(rating);
+    onSetRating(messages[rating - 1] || rating);
   }
   const textStyle = {
     lineHeight: "1",

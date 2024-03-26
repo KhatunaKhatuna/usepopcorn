@@ -6,6 +6,7 @@ import StarRating from "./components/StarRating";
 
 function TestStarRating() {
   const [movieRaiting, setMovieRaiting] = useState(0);
+
   return (
     <div>
       <StarRating
@@ -16,7 +17,7 @@ function TestStarRating() {
         defaultRating={3}
         onSetRating={setMovieRaiting}
       />
-      <p>This movies was rated {movieRaiting} stars</p>
+      <p>This movies was rated {movieRaiting}</p>
     </div>
   );
 }
